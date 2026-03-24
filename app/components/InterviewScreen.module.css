@@ -1,0 +1,180 @@
+.wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; animation:up .4s ease both; }
+@keyframes up { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
+
+.header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1.25rem; }
+.role { font-size:15px; font-weight:600; letter-spacing:-.3px; }
+.meta { font-size:11px; color:var(--text-muted); margin-top:2px; font-family:'JetBrains Mono',monospace; }
+.qBadge { background:var(--bg-card2); border:1px solid var(--border); border-radius:20px; padding:5px 14px; font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--text-muted); white-space:nowrap; }
+
+.progressBar { height:2px; background:var(--border); border-radius:2px; margin-bottom:1.5rem; overflow:hidden; }
+.progressFill { height:100%; background:var(--accent); border-radius:2px; transition:width .6s cubic-bezier(.4,0,.2,1); }
+
+.profileCard { 
+  background: var(--bg-card); 
+  border: 1px solid var(--border); 
+  border-radius: var(--r-md); 
+  padding: 1.25rem; 
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profileHeader { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+}
+
+.profileAvatar { 
+  width: 44px; 
+  height: 44px; 
+  background: var(--accent-dim); 
+  border: 1px solid var(--accent); 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 18px; 
+  font-weight: 700; 
+  color: var(--accent); 
+  flex-shrink: 0; 
+}
+
+.profileMain { 
+  flex: 1; 
+  min-width: 0; /* Prevents overflow */
+}
+
+.profileName { 
+  font-size: 15px; 
+  font-weight: 600; 
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.profileExp { 
+  font-size: 11px; 
+  color: var(--text-muted); 
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.4;
+}
+
+.profileSummary {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.profileSkills { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-top: 4px;
+}
+
+.skill { 
+  background: var(--bg-hover); 
+  border: 1px solid var(--border-md); 
+  border-radius: 8px; 
+  padding: 4px 10px; 
+  font-size: 11px; 
+  font-weight: 500;
+  color: var(--text-muted); 
+  transition: all 0.2s;
+}
+
+.skill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.profileStrengths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.strength {
+  font-size: 11px;
+  color: var(--green);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.history { display:flex; flex-direction:column; gap:10px; margin-bottom:1.25rem; }
+.historyItem { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; position:relative; opacity:.85; transition: opacity 0.2s; }
+.historyItem:hover { opacity:1; }
+.historyMeta { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.historyType { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; padding:2px 8px; border-radius:4px; font-family:'JetBrains Mono',monospace; }
+.historyScore { font-size:13px; font-weight:700; font-family:'JetBrains Mono',monospace; }
+.historyQ { font-size:13px; font-weight:600; color:var(--text); margin-bottom:6px; line-height:1.5; }
+.historyA { font-size:13px; color:var(--text-muted); line-height:1.6; padding-left:12px; border-left:2px solid var(--border); margin-left:2px; }
+.historyNote { font-size:11px; color:var(--text-faint); margin-top:8px; font-style:italic; padding-left:14px; }
+
+.questionBox { background:var(--bg-card); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:var(--r-md); padding:1.25rem 1.5rem; margin-bottom:1rem; animation:fadeQ .3s ease; }
+@keyframes fadeQ { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
+.qMeta { display:flex; align-items:center; gap:10px; margin-bottom:.75rem; }
+.qTypeBadge { font-size:10px; font-weight:500; padding:3px 10px; border-radius:20px; font-family:'JetBrains Mono',monospace; }
+.qIntent { font-size:10px; color:var(--text-faint); font-family:'JetBrains Mono',monospace; }
+.questionText { font-size:17px; font-weight:500; line-height:1.55; letter-spacing:-.2px; }
+
+.textarea { width:100%; padding:14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md); color:var(--text); font-size:14px; line-height:1.7; resize:vertical; min-height:130px; transition:border-color .2s; margin-bottom:.75rem; }
+.textarea:focus { border-color:var(--border-md); }
+.textarea::placeholder { color:var(--text-faint); }
+.textarea:disabled { opacity:.5; }
+
+.textarea.coding { 
+  font-family: 'JetBrains Mono', monospace; 
+  background: var(--bg-card); 
+  border-color: var(--blue);
+  white-space: pre;
+  tab-size: 2;
+  font-size: 13px;
+}
+
+.footer { display:flex; align-items:center; justify-content:space-between; gap: 20px; }
+.controls { display:flex; align-items:center; gap:12px; flex: 1; }
+.hint { font-size:11px; color:var(--text-faint); font-family:'JetBrains Mono',monospace; white-space: nowrap; }
+
+.btnMic { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+  padding: 8px 14px; 
+  background: var(--bg-card2); 
+  border: 1px solid var(--border); 
+  border-radius: 20px; 
+  color: var(--text-muted); 
+  font-size: 11px; 
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+}
+
+.btnMic:hover { border-color: var(--blue); color: var(--blue); }
+
+.btnMic.recording { 
+  background: rgba(239, 68, 68, 0.1); 
+  border-color: #ef4444; 
+  color: #ef4444; 
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.btnSubmit { padding:12px 26px; background:var(--accent); color:var(--accent-text); border-radius:var(--r-sm); font-size:13px; font-weight:700; transition:background .2s,transform .1s; flex-shrink: 0; }
+.btnSubmit:hover:not(:disabled) { background:var(--accent-dark); }
+.btnSubmit:active { transform:scale(.97); }
+.btnSubmit:disabled { opacity:.5; cursor:not-allowed; }

@@ -1,0 +1,84 @@
+.wrap { max-width:680px; margin:0 auto; padding:2rem 1.5rem 5rem; animation:up .4s ease both; }
+@keyframes up { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
+
+.logo { display:flex; align-items:center; gap:12px; margin-bottom:1.75rem; }
+.logoIcon { width:36px; height:36px; background:var(--accent); border-radius:9px; display:flex; align-items:center; justify-content:center; color:var(--accent-text); flex-shrink:0; }
+.logoIcon svg { width:18px; height:18px; }
+.logoName { font-size:16px; font-weight:600; letter-spacing:-.3px; }
+.logoTag { font-size:10px; color:var(--text-faint); font-family:'JetBrains Mono',monospace; margin-top:2px; }
+
+.decisionCard {
+  border: 1px solid;
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  word-wrap: break-word; /* Ensures long words wrap */
+  overflow-wrap: break-word; /* Ensures compatibility */
+  overflow: hidden; /* Prevents content from spilling */
+  max-width: 100%; /* Ensures the card doesn't exceed its container */
+}
+.decisionTop { display:flex; align-items:flex-start; gap:14px; margin-bottom:.75rem; }
+.decisionEmoji { font-size:28px; flex-shrink:0; }
+.decisionLabel { font-size:12px; font-weight:700; letter-spacing:1.5px; font-family:'JetBrains Mono',monospace; margin-bottom:4px; }
+.decisionHeadline { font-size:16px; font-weight:500; line-height:1.45; color:var(--text); }
+.overallScore { margin-left:auto; font-size:42px; font-weight:700; font-family:'JetBrains Mono',monospace; line-height:1; flex-shrink:0; }
+.scoreUnit { font-size:20px; }
+.confidenceBadge { font-size:11px; color:var(--text-faint); font-family:'JetBrains Mono',monospace; }
+.confidenceBadge strong { color:var(--text-muted); }
+
+.tabs { display:flex; gap:4px; margin-bottom:1.25rem; background:var(--bg-card); border-radius:var(--r-sm); padding:4px; }
+.tab { flex:1; padding:8px; background:transparent; border-radius:6px; font-size:13px; font-weight:500; color:var(--text-muted); transition:all .15s; }
+.tab:hover { color:var(--text); }
+.tabActive { background:var(--bg-card2); color:var(--text); }
+
+.tabContent { animation:fade .25s ease; }
+@keyframes fade { from{opacity:0} to{opacity:1} }
+
+.section { margin-bottom:1.25rem; }
+.sectionTitle { font-size:13px; font-weight:500; margin-bottom:.75rem; }
+
+.standout { background:var(--bg-card); border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:var(--r-sm); padding:1rem 1.25rem; font-size:14px; color:var(--text-muted); line-height:1.6; }
+
+.twoCol { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:1.25rem; }
+.card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md); padding:1rem 1.25rem; margin-bottom:0; }
+.cardTitle { font-size:12px; font-weight:500; margin-bottom:.75rem; }
+.listItem { display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--text-muted); line-height:1.55; margin-bottom:6px; }
+.listDot { width:5px; height:5px; border-radius:50%; flex-shrink:0; margin-top:5px; }
+
+.impCard { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-sm); padding:.875rem 1rem; margin-bottom:8px; }
+.impArea { font-size:12px; font-weight:600; color:var(--accent); margin-bottom:4px; font-family:'JetBrains Mono',monospace; }
+.impFeedback { font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+.nextStepsBox { background:var(--accent-dim); border:1px solid rgba(232,255,71,.2); border-radius:var(--r-md); padding:1rem 1.25rem; }
+.nsLabel { font-size:10px; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:.8px; font-family:'JetBrains Mono',monospace; margin-bottom:5px; }
+.nsText { font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+.statsGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:1rem; }
+.statCard { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md); padding:1rem; text-align:center; }
+.statNum { font-size:28px; font-weight:700; font-family:'JetBrains Mono',monospace; }
+.statLabel { font-size:11px; color:var(--text-faint); margin-top:4px; }
+
+.radarRow { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.radarLabel { font-size:11px; color:var(--text-muted); width:130px; flex-shrink:0; text-transform:capitalize; }
+.radarTrack { flex:1; height:4px; background:var(--border); border-radius:2px; overflow:hidden; }
+.radarFill { height:100%; border-radius:2px; transition:width .8s ease; }
+.radarVal { font-size:11px; font-family:'JetBrains Mono',monospace; width:28px; text-align:right; flex-shrink:0; }
+
+.qScore { border-bottom:1px solid var(--border); padding:10px 0; }
+.qScore:last-child { border-bottom:none; }
+.qScoreQ { font-size:12px; color:var(--text-muted); margin-bottom:4px; line-height:1.4; }
+.qScoreBottom { display:flex; justify-content:space-between; align-items:center; }
+.qScoreNote { font-size:11px; color:var(--text-faint); font-style:italic; flex:1; }
+.qScoreVal { font-size:14px; font-weight:600; font-family:'JetBrains Mono',monospace; flex-shrink:0; }
+
+.transcriptItem { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md); padding:1rem 1.25rem; margin-bottom:10px; }
+.tQuestion { font-size:15px; font-weight:700; line-height:1.5; margin-bottom:.75rem; display:flex; flex-direction:column; align-items:flex-start; gap:8px; color:var(--text); letter-spacing:-0.2px; }
+.tQBadge { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; background:var(--bg-card2); border:1px solid var(--border-md); border-radius:4px; padding:3px 10px; font-family:'JetBrains Mono',monospace; color:var(--text-muted); flex-shrink:0; }
+.tAnswer { font-size:12px; color:var(--text-muted); line-height:1.65; border-left:2px solid var(--border); padding-left:10px; margin-bottom:.5rem; }
+.tEval { font-size:11px; color:var(--text-faint); font-style:italic; }
+
+.btnRestart { width:100%; padding:14px; background:var(--accent); color:var(--accent-text); border-radius:var(--r-md); font-size:14px; font-weight:700; transition:background .2s,transform .1s; margin-top:1.5rem; }
+.btnRestart:hover { background:var(--accent-dark); }
+.btnRestart:active { transform:scale(.98); }
+
+@media(max-width:500px) { .twoCol{grid-template-columns:1fr;} .statsGrid{grid-template-columns:repeat(2,1fr);} }
