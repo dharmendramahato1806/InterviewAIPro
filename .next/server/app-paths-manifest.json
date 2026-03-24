@@ -1,3 +1,10 @@
 {
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/interview/analyze-resume/route": "app/api/interview/analyze-resume/route.js",
+  "/api/interview/evaluate-answer/route": "app/api/interview/evaluate-answer/route.js",
+  "/api/interview/final-verdict/route": "app/api/interview/final-verdict/route.js",
+  "/api/interview/next-question/route": "app/api/interview/next-question/route.js",
+  "/api/interview/parse-resume/route": "app/api/interview/parse-resume/route.js",
   "/page": "app/page.js"
 }
