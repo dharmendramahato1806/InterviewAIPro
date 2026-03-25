@@ -1,7 +1,6 @@
 # InterviewAI Pro (Next.js Version)
 
-This is a consolidated version of the InterviewAI Pro platform, combining both the frontend and backend into a single Next.js application.
-
+This is a unified InterviewAI Pro platform built entirely using Next.js, where both the application logic and UI are handled within a single codebase.
 ## Getting Started
 
 1.  **Clone/Open the project** in the `interviewai-next` directory.
